@@ -1,0 +1,120 @@
+.header {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    @media screen and (min-width:768px) and (max-width:1199px)  {
+     padding-top: 26px;
+    padding-bottom: 16px;
+     } 
+ @media screen  and (min-width:1200px) {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    }
+    .container {
+  @extend %align-list;
+}
+}
+.menu-open-btn  {
+   @media screen and (min-width:768px) {
+    display: none;
+     } 
+    margin-left: auto;
+    border: none;
+    background-color: transparent;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+transition-property: all;
+
+    &:hover, &:focus {
+    fill: #2196F3;
+   
+    
+}
+}
+
+
+.navigation {
+    @media screen and (max-width:767px) {
+    display: none;
+     } 
+}
+
+ .menu-list {
+     display: flex;
+}
+.menu-list__item {
+    position: relative;
+    &:not(:last-child) {
+margin-right: 50px;
+}
+}
+.menu-list__link {
+     @include font (14px, 1.14, 500, 0.02em);
+color: #212121;
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+transition-property: all;
+&.current {
+    color: var(--acent-color);
+    }
+&:hover, &:focus {
+    color: #2196F3;
+}
+}
+
+.menu-list__line::after {
+
+
+    position: absolute;
+    content: "";
+    display: block;
+
+width: 48px;
+height: 4px;
+margin-top: 28px;
+background-color: #2196F3;
+border-radius: 2px;
+}
+.contact {
+    @media screen and (max-width:1199px) {
+    display: block;
+     }    
+}
+.contact-list__link {
+     @include font (14px, 1.14, 500, 0.02em);
+    color: var(--text-color); 
+    @extend %align-list;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: all;
+    &:hover, &:focus {
+    color: #2196F3;
+     @media screen and (min-width:767px) and (max-width:1199px) {
+    margin-bottom: 100px; 
+}
+}
+}
+.contact-list {
+    @media screen and (min-width:1200px) {
+    display: flex;
+}
+}
+.contact {
+     @media screen and (max-width:767px) {
+    display: none;
+     }  
+    margin-left: auto;
+}
+
+.contact-list__icon {
+    fill: currentColor;
+    margin-right: 10px;
+}
+
+.contact-list__item {
+     @media screen and (min-width:768px) and (max-width:1199px) { 
+    margin-bottom: 10px;
+    }
+    @media screen and (min-width:1200px) {
+        &:not(:last-child){
+        margin-right: 30px;
+    }
+}
+}
+ 

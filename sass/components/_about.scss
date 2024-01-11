@@ -1,0 +1,34 @@
+.about {
+    padding-bottom: 94px;
+    @media screen and (max-width: 1199px) {
+     display: none;
+     }
+}
+.about-title {
+    margin-bottom: 50px;
+   @extend %align-list;
+   justify-content: center;
+}
+.about-list {
+    display: flex;
+}
+.about-item:not(:last-child) {
+margin-right: var(--typical-margin);
+}
+.about-top-wrap {
+    position: relative;
+}
+.about-text {
+    position: absolute;
+    bottom: 0;
+    width: 370px;
+    height: 70px;
+@include font (14px, 1.14, 700, 0.03em);
+
+text-transform: uppercase;
+color: #FFFFFF;
+background-color: rgba(47, 48, 58, 0.8);
+
+@extend %align-list;
+justify-content: center;
+}
